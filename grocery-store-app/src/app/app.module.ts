@@ -14,12 +14,19 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { HeaderSectionComponent } from './Components/header-section/header-section.component';
 import { MainPageComponent } from './Components/main-page/main-page.component';
 import { AppFooterSectionComponent } from './Components/app-footer-section/app-footer-section.component';
 import { MarketplacePageComponent } from './Components/marketplace-page/marketplace-page.component';
 import { ContactUsPageComponent } from './Components/contact-us-page/contact-us-page.component';
 import { InventoryPageComponent } from './Components/inventory-page/inventory-page.component';
+import { LoginComponent } from './Components/login/login.component';
+import { RegisterComponent } from './Components/register/register.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +38,9 @@ import { InventoryPageComponent } from './Components/inventory-page/inventory-pa
     AppFooterSectionComponent,
     MarketplacePageComponent,
     ContactUsPageComponent,
-    InventoryPageComponent
+    InventoryPageComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +54,11 @@ import { InventoryPageComponent } from './Components/inventory-page/inventory-pa
     MatCardModule,
     MatButtonModule,
     MatIconModule,
+    MatDialogModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
