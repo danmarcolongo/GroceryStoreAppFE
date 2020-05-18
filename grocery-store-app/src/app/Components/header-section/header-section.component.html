@@ -5,25 +5,18 @@
  -->
 
 <mat-toolbar>
-    <toolbar-row class="header-head">
-        <span>
-            <h2>Grocery Store</h2>
-        </span>
-    </toolbar-row>
-    <toolbar-row class="header-tab">
-        <span>
-            <nav mat-tab-nav-bar>
-                <a mat-tab-link routerLinkActive #rla="routerLinkActive" [active]="rla.isActive"
-                    [routerLink]="header.url" *ngFor="let header of headers" class="pagination"> {{header.name}} </a>
-            </nav>
-        </span>
-    </toolbar-row>
-    <toolbar-row class="header-login">
-        <span>
-            <button mat-icon-button>
-                <mat-icon>input</mat-icon>
-            </button>
-        </span>
-    </toolbar-row>
-
+    <span class="header-head">
+        <h2>Grocery Store</h2>
+    </span>
+    <span class="header-tab">
+        <nav mat-tab-nav-bar>
+            <a mat-tab-link routerLinkActive #rla="routerLinkActive" [active]="rla.isActive" [routerLink]="header.url"
+                *ngFor="let header of headers" class="pagination"> {{header.name}} </a>
+        </nav>
+    </span>
+    <span class="header-login">
+        <button mat-icon-button (click)="openDialog()">
+            <mat-icon>input</mat-icon>
+        </button>
+    </span>
 </mat-toolbar>
